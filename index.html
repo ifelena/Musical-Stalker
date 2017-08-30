@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>API Group Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+
+
+    
+
+  </script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-md-4 sidenav">
+      <h1>Music Stalker</h1>
+     
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Artists..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+      <br>
+      <h3>Browse by Genre</h3>
+      	<br>
+      <button type="button" class="btn btn-primary btn-lg">Alternative</button> 
+      <button type="button" class="btn btn-primary btn-lg">Blues</button> 
+      <button type="button" class="btn btn-primary btn-lg">Classical</button>
+      <button type="button" class="btn btn-primary btn-lg">Country</button>
+      <button type="button" class="btn btn-primary btn-lg">Dance</button>
+      <button type="button" class="btn btn-primary btn-lg">Easy Listening</button>
+      <button type="button" class="btn btn-primary btn-lg">Electronic</button>
+      <button type="button" class="btn btn-primary btn-lg">Folk</button>
+      <button type="button" class="btn btn-primary btn-lg">Heavy Metal</button> 
+      <button type="button" class="btn btn-primary btn-lg">Hip Hop/Rap</button> 
+      <button type="button" class="btn btn-primary btn-lg">Jazz</button>  
+      <button type="button" class="btn btn-primary btn-lg">Latin</button>      
+      <button type="button" class="btn btn-primary btn-lg">New Age</button> 
+      <button type="button" class="btn btn-primary btn-lg">Opera</button>
+      <button type="button" class="btn btn-primary btn-lg">Pop</button>  
+      <button type="button" class="btn btn-primary btn-lg">R&B/Soul</button> 
+      <button type="button" class="btn btn-primary btn-lg">Reggae</button>
+      <button type="button" class="btn btn-primary btn-lg">Rock</button>  
+      <button type="button" class="btn btn-primary btn-lg">Vocal</button> 
+      	<h3>Select Dates</h3>
+
+      <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+    <span></span> <b class="caret"></b>
+</div>
+    </div>
+		
+    <div class="col-md-8">
+      <h1><small>Band Name</small></h1>
+      <hr>
+      
+      <h2>Tour Dates</h2>
+      
+      <p>Include API for tour dates, map of venues, etc. </p>
+      <br><br>
+      
+     
+      <hr>
+      <h2>Similar Artists</h2>
+      <p>Provide a list of similar artists</p>
+      <br><br>
+      <hr>
+
+      <h2>Related Venues by Location</h2>
+      <p>Google maps API to show similar venues in the area</p>
+      <br><br>
+      <hr>
+
+       <h2>Media</h2>
+      <p>Youtube videos, Spotify, etc.</p>
+      <br><br>
+      <hr>
+
+      
+              <br>
+            </div>
+          </div>
+        </div>
+      
+    
+  
+
+
+<footer class="container-fluid">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>
