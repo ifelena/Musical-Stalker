@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  <script type="text/javascript" src="assets/javascript/logic.js"></script>
 
   <style>
     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
@@ -39,7 +40,7 @@
 
     
 
-  </script>
+  
 </head>
 <body>
 
@@ -47,15 +48,19 @@
   <div class="row content">
     <div class="col-md-4 sidenav">
       <h1>Music Stalker</h1>
-     
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Artists..">
+     	
+     	<form role="form">
+      <div class="form-group">
+        <label for="name-input">Search Artists:</label>
+        <input class="form-control" id="artist-input" type="text">
         <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
+          
+            
+          
         </span>
       </div>
+      <button type = "submit" class = "btn btn-primary btn-md" id="addArtist">submit</button>
+      
       <br>
       <h3>Browse by Genre</h3>
       	<br>
@@ -84,6 +89,17 @@
     <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
     <span></span> <b class="caret"></b>
 </div>
+		<br>
+		<br>
+		<br>
+		<div class = "panel panel-primary">
+			<div class="panel-heading">
+		<h3 class = "panel-title">Recent Searches</h3>
+		</div>
+		<div class = "panel-body">
+			<h2 id="searchDisplay"></h2>
+			</div>
+    </div>
     </div>
 		
     <div class="col-md-8">
