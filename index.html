@@ -2,19 +2,40 @@
 
 <html lang="en">
 <head>
-  <title>API Group Project</title>
+  <title>Music Stalker</title>
+
+
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
+
+<!-- Materialize CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+<!-- =================================== -->
+  <!-- MIGHT BE AN ISSUE HERE -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+<!-- JQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  </script> 
+
+<!-- Stylesheet reference -->
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+<!-- GooglePlace API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFRWN8PVL2qv6q8xUl096GVi-Lp5TDdeQ&libraries=places&callback=initMap" async defer></script>
+
+<!-- Map javascript reference -->
+  <script src="assets/mapScript.js"></script>
+
+
+
 </head>
 
 <body>
   &lt;
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-  </script> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js">
-  </script>
+
   <style>
      /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
      .row.content {height: 1500px}
@@ -46,7 +67,7 @@
 
 
   <div class="row">
-    <div class="col s12 m12 l6">
+    <div class="col s12 m12 l4">
       <div class="card-panel">
         <div class="preloader-wrapper big active">
           <div class="spinner-layer spinner-blue-only">
@@ -107,10 +128,25 @@
             <div class="row">
               <div class="input-field col s12">
                 <i class="material-icons prefix">transform</i> <input class="validate" id="icon_prefix" type="text"> <label for="icon_prefix">Genre</label>
+
                <!--  Fancy buttons w/genres -->
                 <div class="row">
                   <div class="input-field col s12 push-s2">
-                    <a class="waves-effect waves-light btn"><i class="material-icons left">music_note</i>Punk</a> <a class="waves-effect waves-light btn"><i class="material-icons left">music_note</i>Rock</a> <a class="waves-effect waves-light btn"><i class="material-icons right">music_note</i>Jazz</a>
+                    <a class="waves-effect waves-light btn">
+                      <i class="material-icons left">music_note</i>
+                        Punk
+                    </a> 
+                    
+                    <a class="waves-effect waves-light btn">
+                      <i class="material-icons left">music_note</i>
+                        Rock
+                    </a> 
+
+                    <a class="waves-effect waves-light btn">
+                      <i class="material-icons right">music_note</i>
+                        Pop
+                    </a>
+
                   </div>
                 </div>
               </div>
@@ -136,51 +172,43 @@
 
 
     <div class="col-sm-8">
-      <h1><small>Band Name</small>
-      </h1>
 
-      <hr>
+      <div id="headerContainerDiv" class="card-panel">
+        <h4>Band Name</h4>
 
+      </div>
 
-      <h2>Tour Dates</h2>
+      <div id="tourDateDiv" class="card-panel">
+        <h4>Tour Dates</h4>
+        <p>Include API for tour dates, map of venues, etc.</p>
+        <br>
+        <br>
+      
+      </div>
 
+      <div id="simArtistDiv" class="card-panel">
+        <h4>Others to Stalk - Related Artists</h4>
+        <p>Provide a list of similar artists</p>
+        <br>
+        <br>
 
-      <p>Include API for tour dates, map of venues, etc.</p>
-      <br>
-      <br>
+      </div>
 
-      <hr>
+      <div class="card-panel">
+        <h4>Venues to Skulk About</h4>
+        <div id="relatedVenues" class="card-panel">
+          <h4>Related Venues by Location</h4>
+        </div>
+      </div>
 
+      <div id="media" class="card-panel">
+        <h4>Soundtrack to Stalk by</h4>
+        <p>Youtube videos, Spotify, etc.</p>
+        <br>
+        <br>
+      </div>
 
-      <h2>Similar Artists</h2>
-
-
-      <p>Provide a list of similar artists</p>
-      <br>
-      <br>
-
-      <hr>
-
-
-      <h2>Related Venues by Location</h2>
-
-
-      <p>Google maps API to show similar venues in the area</p>
-      <br>
-      <br>
-
-      <hr>
-
-
-      <h2>Media</h2>
-
-
-      <p>Youtube videos, Spotify, etc.</p>
-      <br>
-      <br>
-
-      <hr>
-      <br>
+        <br>
     </div>
   </div>
 
@@ -201,7 +229,7 @@
                 <img src="https://imageog.flaticon.com/icons/png/512/25/25231.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF" alt="some_text" style="width: 80px;height: 40px;">
                 <ul>
                   <li><a class="grey-text text-lighten-3" href="#!">Github Ife</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Github Shawn</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Github Shaun</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">Github Tom</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">Github Sean </a></li>
                 </ul>
