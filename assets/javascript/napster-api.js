@@ -1,7 +1,4 @@
-<head>
-	<title></title>
-</head>
-<body>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
@@ -29,7 +26,7 @@
 
     // Querying the bandsintown api for the selected artist, the ?app_id parameter is required, but can equal anything
     var queryURL = "http://api.napster.com/v2.2/artists/art.954/tracks?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&limit=5";
-    
+
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -48,5 +45,3 @@
 
 
 
-</body>
-</html>
