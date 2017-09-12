@@ -1,47 +1,53 @@
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
+   // where input from text box is bandName
 
+   $(document).ready()
 
-	$("#select-artist").click(function(){
-  	event.preventDefault();
-  	searchNapster($("#artist-input").val());
-	});
-
-
-  function searchNapster(artistname) {
-
-    // Querying the bandsintown api for the selected artist, the ?app_id parameter is required, but can equal anything
-    var queryURL = "http://api.napster.com/v2.2/search?apikey=OTM2NzJhM2ItNTAyNS00NGRhLTk5YTMtNDA5MzA3ZDllYzQ1&query=weezer&type=artist";
+    var bandName = "green day";
+    var queryURL = "http://api.napster.com/v2.2/search?apikey=OTM2NzJhM2ItNTAyNS00NGRhLTk5YTMtNDA5MzA3ZDllYzQ1&query=" +bandName+ "&type=artist";
     $.ajax({
       url: queryURL,
       method: "GET"
     }).done(function(response) {
-       console.log(response);
+        console.log(response);
+      if (response.order)
+        response=response.order[0];
 
-    });
+       console.log(response.search.order[0]);
 
-     function searchNapster(tracks) {
+       var bandID=(response.search.order[0]);
+        //randomizer
+       var x = Math.floor((Math.random() * response.search.data.artists[0].blurbs.length) + 1);
 
-    // Querying the bandsintown api for the selected artist, the ?app_id parameter is required, but can equal anything
-    var queryURL = "http://api.napster.com/v2.2/artists/art.954/tracks?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&limit=5";
+        //need to create randomizer here to grab random blurbs
+       var artistData=(response.search.data.artists[0].blurbs[x-1]);
+
+          console.log(bandID);
+
+          console.log(x);
+
+          console.log(artistData);
+           
+
+    // Taking band Id capured and using it to find specefic tracks to play.
+
+  
+    queryURL = "http://api.napster.com/v2.2/artists/" + bandID + "/tracks?apikey=OTM2NzJhM2ItNTAyNS00NGRhLTk5YTMtNDA5MzA3ZDllYzQ1&limit=2";
 
     $.ajax({
       url: queryURL,
       method: "GET"
     }).done(function(response) {
-       console.log(response);
+      console.log(response);
 
-    });
-  }
+      if (response.previewURL)
+        response=response.tracks["0"].previewURL;
 
-  // Create function(loop?) to query only the tour date and venue latitude and longitude
-
-
- // Create table using materialize to append artists tour dates and venue location
- 
+      console.log(response.tracks["0"].previewURL);
 
 
-
-
+      // document.getElementById("demo").innerHTML = bandID;
+      
+    })
+     });
