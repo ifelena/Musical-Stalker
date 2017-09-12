@@ -8,6 +8,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
 
+<!-- Reset Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="assets/reset.css">
+
 <!-- JQuery CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
   </script> 
@@ -20,16 +23,19 @@
 <!-- Stylesheet reference -->
   <link rel="stylesheet" type="text/css" href="assets/style.css">
 
-<!-- GooglePlace API -->
+<!-- GooglePlace API  -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFRWN8PVL2qv6q8xUl096GVi-Lp5TDdeQ&libraries=places&callback=initMap" async defer></script>
 
 <!-- Map javascript reference -->
   <script src="assets/javascript/mapScript.js"></script>
 
+
 <!-- Firebase reference -->
 	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
+  <script src="assets/javascript/logic.js"></script>
 
-  <!-- Napster(Media)javascript reference --> 
+<!-- Napster(Media)javascript reference --> 
   <script src="assets/javascript/napster-api.js"></script>
 
 </head>
@@ -121,32 +127,78 @@
           <form class="col s12">
             <div class="row">
               <div class="input-field col s12">
-                <i class="material-icons prefix">music_video</i> <input class="validate" id="icon_prefix" type="text"> <label for="icon_prefix">Band Name</label>
+                <i class="material-icons prefix">music_video</i> <input class="validate" id="artist-input" type="text"> <label for="icon_prefix">Artist Name</label>
               </div>
             </div>
 
 
             <div class="row">
               <div class="input-field col s12">
-                <i class="material-icons prefix">transform</i> <input class="validate" id="icon_prefix" type="text"> <label for="icon_prefix">Genre</label>
+                <i class="material-icons prefix">transform</i> <input class="validate" id="genre-input" type="text"> <label for="icon_prefix">Genre</label>
 
                <!--  Fancy buttons w/genres -->
+
+
                 <div class="row">
                   <div class="input-field col s12 push-s2">
+
+                  <a class="waves-effect waves-light btn">
+                      <i class="material-icons left">music_note</i>
+                        Blues
+                    </a> 
+                    <a class="waves-effect waves-light btn">
+                      <i class="material-icons left">music_note</i>
+                        Classical
+                    </a> 
+
+                  <a class="waves-effect waves-light btn">
+                      <i class="material-icons left">music_note</i>
+                        Country
+                    </a> 
+                    <a class="waves-effect waves-light btn">
+                      <i class="material-icons left">music_note</i>
+                        Easy Listening
+                    </a> 
+                    <a class="waves-effect waves-light btn">
+                      <i class="material-icons left">music_note</i>
+                        Electronic
+                    </a> 
+                    <a class="waves-effect waves-light btn">
+                      <i class="material-icons left">music_note</i>
+                        Folk
+                    </a> 
+                     <a class="waves-effect waves-light btn">
+                      <i class="material-icons left">music_note</i>
+                        Jazz
+                    </a> 
+                     <a class="waves-effect waves-light btn">
+                      <i class="material-icons left">music_note</i>
+                        New Age
+                    </a> 
+                     <a class="waves-effect waves-light btn">
+                      <i class="material-icons left">music_note</i>
+                        Pop
+                    </a> 
                     <a class="waves-effect waves-light btn">
                       <i class="material-icons left">music_note</i>
                         Punk
                     </a> 
-                    
+                     <a class="waves-effect waves-light btn">
+                      <i class="material-icons left">music_note</i>
+                        RnB
+                    </a> 
+                    <a class="waves-effect waves-light btn">
+                      <i class="material-icons left">music_note</i>
+                        Rap
+                    </a> 
                     <a class="waves-effect waves-light btn">
                       <i class="material-icons left">music_note</i>
                         Rock
                     </a> 
 
-                    <a class="waves-effect waves-light btn">
-                      <i class="material-icons right">music_note</i>
-                        Pop
+                    
                     </a>
+                     
 
                   </div>
                 </div>
@@ -155,14 +207,27 @@
 
               <div class="row">
                 <div class="input-field col s12">
-                  <i class="material-icons prefix">location_searching</i> <input class="validate" id="icon_prefix" type="text"> <label for="icon_prefix">Location</label>
+                  <i class="material-icons prefix">location_searching</i> <input class="validate" id="location-input" type="text"> <label for="icon_prefix">Location</label>
                 </div>
               </div>
 
 
               <div class="row">
                 <div class="input-field col s12">
-                  <button class="btn cyan waves-effect waves-light right" name="action" type="submit">Submit <i class="mdi-content-send right"></i></button>
+                  <button class="btn cyan waves-effect waves-light right" name="action" type="submit" id="addArtist">Submit<i class="mdi-content-send right"></i></button>
+
+                  <br>
+                  <br>
+                  
+                  <div id ="searchDisplay">
+                  <h5>Recent Searches</h5>
+                  <ul class="collection">
+                      <li class="collection-item"></li>
+                      <li class="collection-item"></li>
+                      <li class="collection-item"></li>
+                      <li class="collection-item"></li>
+                            </ul>
+                    </div>
                 </div>
               </div>
             </div>
