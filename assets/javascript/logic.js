@@ -12,7 +12,7 @@ $(document).ready(function(){
   // console.log(firebase);
 
   var database = firebase.database();
-
+  
 
 
   	
@@ -26,7 +26,7 @@ $(document).ready(function(){
   	 	event.preventDefault()
       console.log("Button was clicked");
 
-      // Grabbed values from text boxes
+      //Grabbed values from text boxes
       var artists = $("#artist-input").val().trim();
       console.log("artists", artists)
 
@@ -46,7 +46,7 @@ $(document).ready(function(){
       var sv = snapshot.val();
 
       // Console.loging the last user's data
-      //console.log(sv.artists);
+      console.log(sv, "hi");
       
 
 
