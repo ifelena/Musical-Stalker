@@ -4,7 +4,7 @@
 
    $(document).ready()
 
-    var bandName = "green day";
+    var bandName = "artistInput";
     var queryURL = "http://api.napster.com/v2.2/search?apikey=OTM2NzJhM2ItNTAyNS00NGRhLTk5YTMtNDA5MzA3ZDllYzQ1&query=" +bandName+ "&type=artist";
     $.ajax({
       url: queryURL,
