@@ -33,7 +33,7 @@
   	//
 
 
-  	// Create arrays to handle data
+  	// Create arrays to handle data for table k=header v=row
 
   	var data = {
   		k: ['Artist', 'Tourdate', 'Venue']
