@@ -37,7 +37,7 @@
 
   	var data = {
   		k: ['Artist', 'Tourdate', 'Venue']
-  		v: [['.artist-input', 'response.datetime', 'response.venue.name',]]  // How do i get the items returned from AJAX to appear in the array?
+  		v: [['.artist-input', 'response.datetime', 'response.venue.name']]  // How do i get the items returned from AJAX to appear in the array?
   	}
 
   	// Make the Table class
