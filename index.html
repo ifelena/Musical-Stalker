@@ -8,6 +8,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
 
+<!-- Reset Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="assets/reset.css">
+
 <!-- JQuery CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
   </script> 
@@ -20,8 +23,8 @@
 <!-- Stylesheet reference -->
   <link rel="stylesheet" type="text/css" href="assets/style.css">
 
-<!-- GooglePlace API 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFRWN8PVL2qv6q8xUl096GVi-Lp5TDdeQ&libraries=places&callback=initMap" async defer></script> -->
+<!-- GooglePlace API  -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFRWN8PVL2qv6q8xUl096GVi-Lp5TDdeQ&libraries=places&callback=initMap" async defer></script>
 
 <!-- Map javascript reference -->
   <script src="assets/javascript/mapScript.js"></script>
@@ -32,7 +35,7 @@
   <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
   <script src="assets/javascript/logic.js"></script>
 
-  <!-- Napster(Media)javascript reference --> 
+<!-- Napster(Media)javascript reference --> 
   <script src="assets/javascript/napster-api.js"></script>
 
 </head>
@@ -131,7 +134,7 @@
 
             <div class="row">
               <div class="input-field col s12">
-                <i class="material-icons prefix">transform</i> <input class="validate" id="icon_prefix" type="text"> <label for="icon_prefix">Genre</label>
+                <i class="material-icons prefix">transform</i> <input class="validate" id="genre-input" type="text"> <label for="icon_prefix">Genre</label>
 
                <!--  Fancy buttons w/genres -->
 
@@ -182,7 +185,7 @@
                     </a> 
                      <a class="waves-effect waves-light btn">
                       <i class="material-icons left">music_note</i>
-                        R&B
+                        RnB
                     </a> 
                     <a class="waves-effect waves-light btn">
                       <i class="material-icons left">music_note</i>
@@ -204,14 +207,14 @@
 
               <div class="row">
                 <div class="input-field col s12">
-                  <i class="material-icons prefix">location_searching</i> <input class="validate" id="icon_prefix" type="text"> <label for="icon_prefix">Location</label>
+                  <i class="material-icons prefix">location_searching</i> <input class="validate" id="location-input" type="text"> <label for="icon_prefix">Location</label>
                 </div>
               </div>
 
 
               <div class="row">
                 <div class="input-field col s12">
-                  <button class="btn cyan waves-effect waves-light right" name="action" type="submit" id="addArtist">Submit <i class="mdi-content-send right"></i></button>
+                  <button class="btn cyan waves-effect waves-light right" name="action" type="submit" id="addArtist">Submit<i class="mdi-content-send right"></i></button>
 
                   <br>
                   <br>
