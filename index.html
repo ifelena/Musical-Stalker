@@ -22,6 +22,8 @@
 
 <!-- Stylesheet reference -->
   <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
 
 <!-- GooglePlace API  -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFRWN8PVL2qv6q8xUl096GVi-Lp5TDdeQ&libraries=places&callback=initMap" async defer></script>
@@ -32,43 +34,18 @@
 
 <!-- Firebase reference -->
 	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
   <script src="assets/javascript/logic.js"></script>
 
 <!-- Napster(Media)javascript reference --> 
   <script src="assets/javascript/napster-api.js"></script>
 
+          
 </head>
 
 <body>
-  &lt;
+  
 
-  <style>
-     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-     .row.content {height: 1500px}
-     
-     /* Set gray background color and 100% height */
-     .sidenav {
-       background-color: #f1f1f1;
-       height: 100%;
-     }
-     
-     /* Set black background color, white text and some padding */
-     footer {
-       background-color: #555;
-       color: white;
-       padding: 15px;
-     }
-     
-     /* On small screens, set height to 'auto' for sidenav and grid */
-     @media screen and (max-width: 767px) {
-       .sidenav {
-         height: auto;
-         padding: 15px;
-       }
-       .row.content {height: auto;} 
-     }
-  </style>
+  
 
   <!--    Fancy spinner -->
 
@@ -120,7 +97,7 @@
         </div>
 
         
-        <h4 class="header2">Music Stalker</h4>
+        <h1 class="header1">Music Stalker</h1>
 
        <!--  Prepare form -->
         <div class="row">
@@ -134,63 +111,89 @@
 
             <div class="row">
               <div class="input-field col s12">
-                <i class="material-icons prefix">transform</i> <input class="validate" id="genre-input" type="text"> <label for="icon_prefix">Genre</label>
+               	<h4 class="header2">Search By Genre</h4>
 
                <!--  Fancy buttons w/genres -->
 
 
-                <div class="row">
+                
                   <div class="input-field col s12 push-s2">
-
+					
                   <a class="waves-effect waves-light btn">
                       <i class="material-icons left">music_note</i>
                         Blues
                     </a> 
+                    <br>
+                    <br>
                     <a class="waves-effect waves-light btn">
                       <i class="material-icons left">music_note</i>
                         Classical
                     </a> 
-
+						 <br>
+                    	<br>
                   <a class="waves-effect waves-light btn">
                       <i class="material-icons left">music_note</i>
                         Country
                     </a> 
+                    <br>
+                    <br>
                     <a class="waves-effect waves-light btn">
                       <i class="material-icons left">music_note</i>
                         Easy Listening
                     </a> 
+
+                    <br>
+                    <br>
                     <a class="waves-effect waves-light btn">
                       <i class="material-icons left">music_note</i>
                         Electronic
                     </a> 
+
+                   	<br>
+                   	<br>
                     <a class="waves-effect waves-light btn">
                       <i class="material-icons left">music_note</i>
                         Folk
                     </a> 
+
+                    <br>
+                    <br>
                      <a class="waves-effect waves-light btn">
                       <i class="material-icons left">music_note</i>
                         Jazz
                     </a> 
+                    <br>
+                    <br>
                      <a class="waves-effect waves-light btn">
                       <i class="material-icons left">music_note</i>
                         New Age
                     </a> 
+                    <br>
+                    <br>
                      <a class="waves-effect waves-light btn">
                       <i class="material-icons left">music_note</i>
                         Pop
                     </a> 
+                    <br>
+                    <br>
                     <a class="waves-effect waves-light btn">
                       <i class="material-icons left">music_note</i>
                         Punk
                     </a> 
+                    <br>
+                    <br>
                      <a class="waves-effect waves-light btn">
                       <i class="material-icons left">music_note</i>
                         RnB
                     </a> 
+                    <br>
+                    <br>
                     <a class="waves-effect waves-light btn">
                       <i class="material-icons left">music_note</i>
                         Rap
                     </a> 
+                    <br>
+                    <br>
                     <a class="waves-effect waves-light btn">
                       <i class="material-icons left">music_note</i>
                         Rock
@@ -202,7 +205,7 @@
 
                   </div>
                 </div>
-              </div>
+              
 
 
               <div class="row">
@@ -218,15 +221,10 @@
 
                   <br>
                   <br>
-                  
-                  <div id ="searchDisplay">
                   <h5>Recent Searches</h5>
-                  <ul class="collection">
-                      <li class="collection-item"></li>
-                      <li class="collection-item"></li>
-                      <li class="collection-item"></li>
-                      <li class="collection-item"></li>
-                            </ul>
+                  <div id ="searchDisplay">
+                  
+                
                     </div>
                 </div>
               </div>
