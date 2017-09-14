@@ -1,4 +1,4 @@
-
+$(document).ready(function() {
 
    // where input from text box is bandName
 function napSearch(){
@@ -72,3 +72,4 @@ function napSearch(){
              })
           });
 }
+});
