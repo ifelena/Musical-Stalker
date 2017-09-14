@@ -4,7 +4,7 @@
 
    $(document).ready()
 
-    var bandName = "artistInput";
+    var bandName = "artist-input";
     var queryURL = "http://api.napster.com/v2.2/search?apikey=OTM2NzJhM2ItNTAyNS00NGRhLTk5YTMtNDA5MzA3ZDllYzQ1&query=" +bandName+ "&type=artist";
     $.ajax({
       url: queryURL,
@@ -48,6 +48,8 @@
 
 
       // document.getElementById("demo").innerHTML = bandID;
-      
+      $("#media").html("artistData")
+      var media = $("<div>");
+
     })
      });
