@@ -38,6 +38,13 @@
 
 <!-- Napster(Media)javascript reference --> 
   <script src="assets/javascript/napster-api.js"></script>
+   <script src="audioplayerengine/jquery.js"></script>
+    <script src="audioplayerengine/amazingaudioplayer.js"></script>
+    <link rel="stylesheet" type="text/css" href="audioplayerengine/initaudioplayer-1.css">
+    <script src="audioplayerengine/initaudioplayer-1.js"></script>
+
+<!-- Bands in Town API javascript ref -->
+  <script src="assets/javascript/tourdates.js"></script>
 
           
 </head>
@@ -49,10 +56,10 @@
 
  
 
-	<div id = sidebar>
+	
   <div class="row">
     <div class="col s12 m12 l4">
-      <div class="card-panel">
+      <div class="card-panel" id = "formWrapper">
         <!-- <div class="preloader-wrapper big active">
           <div class="spinner-layer spinner-blue-only">
             <div class="circle-clipper left">
@@ -227,8 +234,13 @@
 
                 <br>
                 <br>
-                <h5>Recent Searches</h5>
+
+              <h5>Last Stalked</h5>
                 <div id ="searchDisplay">
+                  
+                
+                 </div>
+
                 </div>
                 
               </div>
@@ -246,12 +258,57 @@
         <h4>Band Name</h4>
 
       </div>
+        
 
-      <div id="tourDateDiv" class="card-panel">
+        <!-- Start Tourdate table -->
+      <div id="tourDateDiv" class="card-panel ">
         <h4>Tour Dates</h4>
         <p>Include API for tour dates, map of venues, etc.</p>
         <br>
+       <div class="col s6">  
+        <table class="striped">
+            <thead>
+              <tr>
+                <th>Artist</th>
+                <th>Tourdate</th>
+                <th>Venue</th>
+              </tr> 
+            </thead>
+            
+            <tbody> 
+                <tr>
+                  <td></td>    
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>  
+            </div>
+
+  <!-- End Tourdate table -->
         <br>
+        <br>
+
       
       </div>
 
@@ -272,7 +329,14 @@
 
       <div id="media" class="card-panel">
         <h4>Soundtrack to Stalk by</h4>
-        <p>Youtube videos, Spotify, etc.</p>
+        <p><div id="amazingaudioplayer-1" style="display:block;position:relative;width:100%;max-width:300px;height:164px;margin:0px auto 0px;">
+        <ul class="amazingaudioplayer-audios" style="display:none;">
+            <li data-artist="" data-title="player" data-album="" data-info="" data-image="audios/IMG_3244.JPG" data-duration="0">
+                <div class="amazingaudioplayer-source" data-type="audio/mpeg" />
+            </li>
+        </ul>
+        <div class="amazingaudioplayer-engine"><a href="" title="jquery music player">Quick Skulk</a></div>
+    </div></p>
         <br>
         <br>
       </div>
@@ -290,8 +354,8 @@
           <div class="container">
             <div class="row">
               <div class="col 12 s2">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                <h5 class="white-text"></h5>
+                <p class="grey-text text-lighten-4"></p>
               </div>
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>

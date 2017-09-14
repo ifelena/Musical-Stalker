@@ -20,6 +20,8 @@ padding: 10pt;
 
 }
 
-#sidebar {
+#formWrapper {
+	background-color: #CFD8DC;
+	margin-left: -20px;
 	
 }
