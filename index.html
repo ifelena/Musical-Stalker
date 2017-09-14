@@ -38,6 +38,10 @@
 
 <!-- Napster(Media)javascript reference --> 
   <script src="assets/javascript/napster-api.js"></script>
+   <script src="audioplayerengine/jquery.js"></script>
+    <script src="audioplayerengine/amazingaudioplayer.js"></script>
+    <link rel="stylesheet" type="text/css" href="audioplayerengine/initaudioplayer-1.css">
+    <script src="audioplayerengine/initaudioplayer-1.js"></script>
 
           
 </head>
@@ -49,10 +53,10 @@
 
  
 
-	<div id = sidebar>
+	
   <div class="row">
     <div class="col s12 m12 l4">
-      <div class="card-panel">
+      <div class="card-panel" id = "formWrapper">
         <!-- <div class="preloader-wrapper big active">
           <div class="spinner-layer spinner-blue-only">
             <div class="circle-clipper left">
@@ -221,7 +225,7 @@
 
                   <br>
                   <br>
-                  <h5>Recent Searches</h5>
+                  <h5>Last Stalked</h5>
                   <div id ="searchDisplay">
                   
                 
@@ -267,7 +271,14 @@
 
       <div id="media" class="card-panel">
         <h4>Soundtrack to Stalk by</h4>
-        <p>Youtube videos, Spotify, etc.</p>
+        <p><div id="amazingaudioplayer-1" style="display:block;position:relative;width:100%;max-width:300px;height:164px;margin:0px auto 0px;">
+        <ul class="amazingaudioplayer-audios" style="display:none;">
+            <li data-artist="" data-title="player" data-album="" data-info="" data-image="audios/IMG_3244.JPG" data-duration="0">
+                <div class="amazingaudioplayer-source" data-type="audio/mpeg" />
+            </li>
+        </ul>
+        <div class="amazingaudioplayer-engine"><a href="" title="jquery music player">Quick Skulk</a></div>
+    </div></p>
         <br>
         <br>
       </div>
