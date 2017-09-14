@@ -20,6 +20,22 @@ padding: 10pt;
 
 }
 
-#sidebar {
+#formWrapper {
+	background-color: #CFD8DC;
+/*	margin-left: -20px;
+	margin-bottom: -19px;*/
 	
+}
+
+#tourDateDiv{
+	
+}
+
+#page-footer{
+	top margin: -25px;
+	position: fixed;
+}
+
+.clear {
+	clear: both;
 }

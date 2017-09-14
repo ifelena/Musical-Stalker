@@ -87,10 +87,19 @@ $(document).ready(function(){
 
 
 
-      $("#searchDisplay").html(searches.length > 0 ? searches[0] : "nothing");
+      $("#searchDisplay").html(searches.length > 0 ? searches[1] : "nothing");
+
+
+      //for (var i = 0; i<searches.length; i++) {
+         // console.log(searches[""]);
+
+        
+        
       
-      
+      //}
 
      
     }); 
 });
+
+//
