@@ -22,8 +22,8 @@ padding: 10pt;
 
 #formWrapper {
 	background-color: #CFD8DC;
-	margin-left: -20px;
-	margin-bottom: -19px;
+/*	margin-left: -20px;
+	margin-bottom: -19px;*/
 	
 }
 
@@ -34,4 +34,8 @@ padding: 10pt;
 #page-footer{
 	top margin: -25px;
 	position: fixed;
+}
+
+.clear {
+	clear: both;
 }
