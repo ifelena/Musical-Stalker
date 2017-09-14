@@ -100,7 +100,7 @@
         <h1 class="header1">Music Stalker</h1>
 
        <!--  Prepare form -->
-        <div class="row">
+        <div class="row"> 
           <form class="col s12">
             <div class="row">
               <div class="input-field col s12">
@@ -111,124 +111,129 @@
 
             <div class="row">
               <div class="input-field col s12">
-               	<h4 class="header2">Search By Genre</h4>
+              
+                <h4 class="header2">Search By Genre</h4>
+
 
                <!--  Fancy buttons w/genres -->
-
-
-                
-                  <div class="input-field col s12 push-s2">
-					
-                  <a class="waves-effect waves-light btn">
-                      <i class="material-icons left">music_note</i>
-                        Blues
-                    </a> 
-                    <br>
-                    <br>
-                    <a class="waves-effect waves-light btn">
-                      <i class="material-icons left">music_note</i>
-                        Classical
-                    </a> 
-						 <br>
-                    	<br>
-                  <a class="waves-effect waves-light btn">
-                      <i class="material-icons left">music_note</i>
-                        Country
-                    </a> 
-                    <br>
-                    <br>
-                    <a class="waves-effect waves-light btn">
-                      <i class="material-icons left">music_note</i>
-                        Easy Listening
-                    </a> 
-
-                    <br>
-                    <br>
-                    <a class="waves-effect waves-light btn">
-                      <i class="material-icons left">music_note</i>
-                        Electronic
-                    </a> 
-
-                   	<br>
-                   	<br>
-                    <a class="waves-effect waves-light btn">
-                      <i class="material-icons left">music_note</i>
-                        Folk
-                    </a> 
-
-                    <br>
-                    <br>
-                     <a class="waves-effect waves-light btn">
-                      <i class="material-icons left">music_note</i>
-                        Jazz
-                    </a> 
-                    <br>
-                    <br>
-                     <a class="waves-effect waves-light btn">
-                      <i class="material-icons left">music_note</i>
-                        New Age
-                    </a> 
-                    <br>
-                    <br>
-                     <a class="waves-effect waves-light btn">
-                      <i class="material-icons left">music_note</i>
-                        Pop
-                    </a> 
-                    <br>
-                    <br>
-                    <a class="waves-effect waves-light btn">
-                      <i class="material-icons left">music_note</i>
-                        Punk
-                    </a> 
-                    <br>
-                    <br>
-                     <a class="waves-effect waves-light btn">
-                      <i class="material-icons left">music_note</i>
-                        RnB
-                    </a> 
-                    <br>
-                    <br>
-                    <a class="waves-effect waves-light btn">
-                      <i class="material-icons left">music_note</i>
-                        Rap
-                    </a> 
-                    <br>
-                    <br>
-                    <a class="waves-effect waves-light btn">
-                      <i class="material-icons left">music_note</i>
-                        Rock
-                    </a> 
-
-                    
-                    </a>
-                     
-					
-                  </div>
-                </div>
-              	
-
-
-              <div class="row">
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">location_searching</i> <input class="validate" id="location-input" type="text"> <label for="icon_prefix">Location</label>
-                </div>
-              </div>
-
-
-              <div class="row">
-                <div class="input-field col s12">
-                  <button class="btn cyan waves-effect waves-light right" name="action" type="submit" id="addArtist">Submit<i class="mdi-content-send right"></i></button>
-
+                <div class="input-field col s12 push-s2">
+				
+                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Blues">
+                    <i class="material-icons left">music_note</i>
+                      Blues
+                </a> 
                   <br>
                   <br>
-                  <h5>Recent Searches</h5>
-                  <div id ="searchDisplay">
-                  
-                
-                    </div>
+
+                <a class="waves-effect waves-light btn" genre="Classical">
+                  <i class="material-icons left">music_note</i>
+                    Classical
+                </a> 
+      						<br>
+                	<br>
+
+                <a class="waves-effect waves-light btn" genre="Country">
+                    <i class="material-icons left">music_note</i>
+                      Country
+                </a> 
+                  <br>
+                  <br>
+
+                <a class="waves-effect waves-light btn" genre="Easy Listening">
+                  <i class="material-icons left">music_note</i>
+                    Easy Listening
+                </a> 
+                  <br>
+                  <br>
+
+                <a class="waves-effect waves-light btn" genre="Electronic">
+                  <i class="material-icons left">music_note</i>
+                    Electronic
+                </a> 
+                 	<br>
+                 	<br>
+
+                <a class="waves-effect waves-light btn" genre="Folk">
+                  <i class="material-icons left">music_note</i>
+                    Folk
+                </a> 
+                  <br>
+                  <br>
+
+                <a class="waves-effect waves-light btn" genre="Jazz">
+                  <i class="material-icons left">music_note</i>
+                    Jazz
+                </a> 
+                  <br>
+                  <br>
+
+                <a class="waves-effect waves-light btn" genre="New Age">
+                  <i class="material-icons left">music_note</i>
+                    New Age
+                </a> 
+                  <br>
+                  <br>
+
+                <a class="waves-effect waves-light btn" genre="Pop">
+                  <i class="material-icons left">music_note</i>
+                    Pop
+                </a> 
+                  <br>
+                  <br>
+
+                <a class="waves-effect waves-light btn" genre="Punk">
+                  <i class="material-icons left">music_note</i>
+                    Punk
+                </a> 
+                  <br>
+                  <br>
+
+                <a class="waves-effect waves-light btn" genre="R&B">
+                  <i class="material-icons left">music_note</i>
+                    RnB
+                </a> 
+                  <br>
+                  <br>
+
+                <a class="waves-effect waves-light btn" genre="Rap">
+                  <i class="material-icons left">music_note</i>
+                    Rap
+                </a> 
+                  <br>
+                  <br>
+
+                <a class="waves-effect waves-light btn" genre="Rock">
+                  <i class="material-icons left">music_note</i>
+                    Rock
+                </a>
+				
                 </div>
+                </div>
+              </div> 
+            </form>
+              <!-- End of Buttons -->
+
+
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">location_searching</i> <input class="validate" id="location-input" type="text"> <label for="icon_prefix">Location</label>
               </div>
             </div>
+
+
+            <div class="row">
+              <div class="input-field col s12">
+                <button class="btn cyan waves-effect waves-light right" name="action" type="submit" id="addArtist">Submit<i class="mdi-content-send right"></i></button>
+
+                <br>
+                <br>
+                <h5>Recent Searches</h5>
+                <div id ="searchDisplay">
+                </div>
+                
+              </div>
+            </div>
+
           </form>
         </div>
       </div>
@@ -310,5 +315,8 @@
 
         </footer>
   </footer>
+
+  <div id="hiddenDataCntr"></div>
+
 </body>
 </html>
