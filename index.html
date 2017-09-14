@@ -57,58 +57,15 @@
  
 
 	
-  <div class="row">
+  <div class="row"> <!-- Encompasses all content --> 
     <div class="col s12 m12 l4">
-      <div class="card-panel" id = "formWrapper">
-        <!-- <div class="preloader-wrapper big active">
-          <div class="spinner-layer spinner-blue-only">
-            <div class="circle-clipper left">
-              <div class="circle">
-              </div>
-            </div>
-
-
-            <div class="gap-patch">
-              <div class="circle">
-              </div>
-            </div>
-
-
-            <div class="circle-clipper right">
-              <div class="circle">
-              </div>
-            </div>
-          </div>
-
-
-          <div class="preloader-wrapper big active">
-            <div class="spinner-layer spinner-red-only">
-              <div class="circle-clipper left">
-                <div class="circle">
-                </div>
-              </div>
-
-
-              <div class="gap-patch">
-                <div class="circle">
-                </div>
-              </div>
-
-
-              <div class="circle-clipper right">
-                <div class="circle">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-        
+      <div class="card-panel" id ="formWrapper">    
         <h1 class="header1">Music Stalker</h1>
 
        <!--  Prepare form -->
         <div class="row"> 
           <form class="col s12">
+            
             <div class="row">
               <div class="input-field col s12">
                 <i class="material-icons prefix">music_video</i> <input class="validate" id="artist-input" type="text"> <label for="icon_prefix">Artist Name</label>
@@ -118,106 +75,103 @@
 
             <div class="row">
               <div class="input-field col s12">
-              
                 <h4 class="header2">Search By Genre</h4>
-
 
                <!--  Fancy buttons w/genres -->
                 <div class="input-field col s12 push-s2">
 				
-		                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Blues">
-		                    <i class="material-icons left">music_note</i>
-		                      Blues
-		                </a> 
-		                  <br>
-		                  <br>
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Blues Music">
+	                    <i class="material-icons left">music_note</i>
+	                      Blues
+	                </a> 
+	                  <br>
+	                  <br>
 
-		                <a class="waves-effect waves-light btn" genre="Classical">
-		                  <i class="material-icons left">music_note</i>
-		                    Classical
-		                </a> 
-		      						<br>
-		                	<br>
+	                <a class="waves-effect waves-light btn" genre="Classical Music">
+	                  <i class="material-icons left">music_note</i>
+	                    Classical
+	                </a> 
+	      						<br>
+	                	<br>
 
-		                <a class="waves-effect waves-light btn" genre="Country">
-		                    <i class="material-icons left">music_note</i>
-		                      Country
-		                </a> 
-		                  <br>
-		                  <br>
+	                <a class="waves-effect waves-light btn" genre="Country Music">
+	                    <i class="material-icons left">music_note</i>
+	                      Country
+	                </a> 
+	                  <br>
+	                  <br>
 
-		                <a class="waves-effect waves-light btn" genre="Easy Listening">
-		                  <i class="material-icons left">music_note</i>
-		                    Easy Listening
-		                </a> 
-		                  <br>
-		                  <br>
+	                <a class="waves-effect waves-light btn" genre="Easy Listening Music">
+	                  <i class="material-icons left">music_note</i>
+	                    Easy Listening
+	                </a> 
+	                  <br>
+	                  <br>
 
-		                <a class="waves-effect waves-light btn" genre="Electronic">
-		                  <i class="material-icons left">music_note</i>
-		                    Electronic
-		                </a> 
-		                 	<br>
-		                 	<br>
+	                <a class="waves-effect waves-light btn" genre="Electronic Music">
+	                  <i class="material-icons left">music_note</i>
+	                    Electronic
+	                </a> 
+	                 	<br>
+	                 	<br>
 
-		                <a class="waves-effect waves-light btn" genre="Folk">
-		                  <i class="material-icons left">music_note</i>
-		                    Folk
-		                </a> 
-		                  <br>
-		                  <br>
+	                <a class="waves-effect waves-light btn" genre="Folk Music">
+	                  <i class="material-icons left">music_note</i>
+	                    Folk
+	                </a> 
+	                  <br>
+	                  <br>
 
-		                <a class="waves-effect waves-light btn" genre="Jazz">
-		                  <i class="material-icons left">music_note</i>
-		                    Jazz
-		                </a> 
-		                  <br>
-		                  <br>
+                    <a class="waves-effect waves-light btn" genre="Hip Hop Music">
+                    <i class="material-icons left">music_note</i>
+                      Hip Hop
+                  </a> 
+                    <br>
+                    <br>
 
-		                <a class="waves-effect waves-light btn" genre="New Age">
-		                  <i class="material-icons left">music_note</i>
-		                    New Age
-		                </a> 
-		                  <br>
-		                  <br>
+	                <a class="waves-effect waves-light btn" genre="Jazz Music">
+	                  <i class="material-icons left">music_note</i>
+	                    Jazz
+	                </a> 
+	                  <br>
+	                  <br>
 
-		                <a class="waves-effect waves-light btn" genre="Pop">
-		                  <i class="material-icons left">music_note</i>
-		                    Pop
-		                </a> 
-		                  <br>
-		                  <br>
+	                <a class="waves-effect waves-light btn" genre="New Age Music">
+	                  <i class="material-icons left">music_note</i>
+	                    New Age
+	                </a> 
+	                  <br>
+	                  <br>
 
-		                <a class="waves-effect waves-light btn" genre="Punk">
-		                  <i class="material-icons left">music_note</i>
-		                    Punk
-		                </a> 
-		                  <br>
-		                  <br>
+	                <a class="waves-effect waves-light btn" genre="Punk Music">
+	                  <i class="material-icons left">music_note</i>
+	                    Punk
+	                </a> 
+	                  <br>
+	                  <br>
 
-		                <a class="waves-effect waves-light btn" genre="R&B">
-		                  <i class="material-icons left">music_note</i>
-		                    RnB
-		                </a> 
-		                  <br>
-		                  <br>
+	                <a class="waves-effect waves-light btn" genre="R&B Music">
+	                  <i class="material-icons left">music_note</i>
+	                    RnB
+	                </a> 
+	                  <br>
+	                  <br>
 
-		                <a class="waves-effect waves-light btn" genre="Rap">
-		                  <i class="material-icons left">music_note</i>
-		                    Rap
-		                </a> 
-		                  <br>
-		                  <br>
+	                <a class="waves-effect waves-light btn" genre="Rap">
+	                  <i class="material-icons left">music_note</i>
+	                    Rap
+	                </a> 
+	                  <br>
+	                  <br>
 
-		                <a class="waves-effect waves-light btn" genre="Rock">
-		                  <i class="material-icons left">music_note</i>
-		                    Rock
-		                </a>
-				
-	                </div>
+	                <a class="waves-effect waves-light btn" genre="Rock Music">
+	                  <i class="material-icons left">music_note</i>
+	                    Rock
+	                </a>
+			
                 </div>
-              </div> 
-            </form>
+              </div>
+            </div> <!-- CLOSES ROW--> 
               <!-- End of Buttons -->
 
 
@@ -239,110 +193,127 @@
                 <div id ="searchDisplay">
                   
                 
-                 </div>
-
                 </div>
-                
+
               </div>
+                
+            </div> <!-- CLOSES ROW--> 
         
 
           </form>
         </div>
       </div>
+    </div> <!-- END OF FORM DIVS--> 
+
+    <!-- START OF DIVS FOR RIGHT JUSTIFIED CONTENT OF SCREEN -->
+    <div class="col s12 m12 l8">
+      
+      <!-- Header Section -->
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <div id="headerContainerDiv" class="card-panel">
+            <h4>Band Name</h4>
+          </div>
+        </div>
+      </div>        
+
+      <!-- Start Tourdate table -->
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <div id="tourDateDiv" class="card-panel ">
+            <h4>Tour Dates</h4>
+            <p>Include API for tour dates, map of venues, etc.</p>
+            <br>  
+            <table class="striped">
+                <thead>
+                  <tr>
+                    <th>Artist</th>
+                    <th>Tourdate</th>
+                    <th>Venue</th>
+                  </tr> 
+                </thead>
+                
+                <tbody> 
+                    <tr>
+                      <td></td>    
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                </tbody>
+            </table>  
+          </div>
+        </div>
+      </div> <!--Closes section Row-->
+
+
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div id="simArtistDiv" class="card-panel">
+          <h4>Others to Stalk - Related Artists</h4>
+          <p>Provide a list of similar artists</p>
+          <br>
+          <br>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div class="card-panel">
+          <h4>Eating and Drinking to Aid the Stalking</h4>
+          <div id="relatedVenues" class="card-panel">
+            <h4>Related Venues by Location</h4>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="row">
-    <div class="col-sm-12">
-
-      <div id="headerContainerDiv" class="card-panel">
-        <h4>Band Name</h4>
-      </div>
-        
-
-        <!-- Start Tourdate table -->
-      <div id="tourDateDiv" class="card-panel ">
-        <h4>Tour Dates</h4>
-        <p>Include API for tour dates, map of venues, etc.</p>
-        <br>
-       <div class="col s6">  
-        <table class="striped">
-            <thead>
-              <tr>
-                <th>Artist</th>
-                <th>Tourdate</th>
-                <th>Venue</th>
-              </tr> 
-            </thead>
+      <div class="col s12 m12 l12">
+        <div id="media" class="card-panel">
+          <h4>Soundtrack to Stalk by</h4>
+            <p><div id="amazingaudioplayer-1" style="display:block;position:relative;width:100%;max-width:300px;height:164px;margin:0px auto 0px;">
+            <ul class="amazingaudioplayer-audios" style="display:none;">
+                <li data-artist="" data-title="player" data-album="" data-info="" data-image="audios/IMG_3244.JPG" data-duration="0">
+                    <div class="amazingaudioplayer-source" data-type="audio/mpeg" />
+                </li>
+            </ul>
             
-            <tbody> 
-                <tr>
-                  <td></td>    
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>  
-            </div>
-
-  <!-- End Tourdate table -->
-        <br>
-        <br>
-
-      
-      </div>
-
-      <div id="simArtistDiv" class="card-panel">
-        <h4>Others to Stalk - Related Artists</h4>
-        <p>Provide a list of similar artists</p>
-        <br>
-        <br>
-
-      </div>
-
-      <div class="card-panel">
-        <h4>Eating and Drinking to Aid the Stalking</h4>
-        <div id="relatedVenues" class="card-panel">
-          <h4>Related Venues by Location</h4>
+            <div class="amazingaudioplayer-engine"><a href="" title="Lurk Player">Quick Skulk</a></div>
+            </div></p>
+          
+          <br>
+          <br>
         </div>
       </div>
-
-      <div id="media" class="card-panel">
-        <h4>Soundtrack to Stalk by</h4>
-        <p><div id="amazingaudioplayer-1" style="display:block;position:relative;width:100%;max-width:300px;height:164px;margin:0px auto 0px;">
-        <ul class="amazingaudioplayer-audios" style="display:none;">
-            <li data-artist="" data-title="player" data-album="" data-info="" data-image="audios/IMG_3244.JPG" data-duration="0">
-                <div class="amazingaudioplayer-source" data-type="audio/mpeg" />
-            </li>
-        </ul>
-        <div class="amazingaudioplayer-engine"><a href="" title="Lurk Player">Quick Skulk</a></div>
-    </div></p>
-        <br>
-        <br>
-      </div>
-
-        <br>
     </div>
-  </div>
+
+
+  </div>  <!-- Closes all content to the Right of the search form-->
+
+    <div class="clear"></div>
 
 
   <!-- Le Footer -->
