@@ -2,7 +2,24 @@
 padding: 10pt;
 }*/
 
+.header2 {
+	font-family: 'Permanent Marker', cursive;
+}
 
 #relatedVenues {
 	height: 150pt;
+}
+
+.card-panel {
+	font-family: 'Permanent Marker', cursive;
+}
+
+.header1 {
+	font-family: 'Audiowide', cursive;
+	color: rgb(140,27,20);
+
+}
+
+#sidebar {
+	
 }

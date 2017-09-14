@@ -12,7 +12,7 @@ $(document).ready(function(){
   // console.log(firebase);
 
   var database = firebase.database();
-  
+  var searches = [""];
 
 
   	
@@ -30,28 +30,33 @@ $(document).ready(function(){
       var artists = $("#artist-input").val().trim();
       console.log("artists", artists)
 
-      var artistData = {
-      	name: artists
-      }
+
+      console.log('before', searches)
+      searches.splice(4)
+      searches.splice(0,0,artists);
+      console.log('after', searches)
       
-      database.ref().push(artistData)
+      database.ref("searches").set(searches)
 });
       
      
 
     
 
-  	     database.ref().orderByChild("dateAdded").limitToLast(5).on("child_added", function(snapshot) {
+  	 database.ref("searches").on("value", function(snapshot) {
     
-      var sv = snapshot.val();
+       searches = snapshot.val();
+       if (!searches) searches=[];
+       console.log(searches);
 
       // Console.loging the last user's data
-      console.log(sv, "hi");
+      console.log(searches);
       
 
 
 
-      $("#searchDisplay").html(sv.name);
+      $("#searchDisplay").html(searches.length > 0 ? searches[0] : "nothing");
+      
       
 
      
