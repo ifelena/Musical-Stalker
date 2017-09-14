@@ -3,7 +3,7 @@
                     
   	});
 
-	// Artist input field id= #artist-input
+	// On click function to store user's input into variable can be found in the logic.js file
 	$("#artist-input").click(function(){
   	event.preventDefault();
   	searchBandsInTown($("#artist-input").val());
@@ -21,7 +21,7 @@
       // Print onject to console
        console.log(response);
       //Construct HTML table with tourdate info
-       var artistName = $('<td>').text('#artist-input');
+       var artistName = $('<td>').text(artist);
        var date = $('<td>').text(response.datetime);
        var venue = $('<td>').text(response.venue.name);
        // Empty the contents of the artist-div, append the new artist content
