@@ -4,60 +4,26 @@
   	});
 
 	// On click function to store user's input into variable can be found in the logic.js file
-	$("#artist-input").click(function(){
-  	event.preventDefault();
-  	searchBandsInTown($("#artist-input").val());
-	});
+  // See logic.js file for querying the bandsintown api for artist info
 
+  // Establish variables for later usage
+  var artistName;
+  var date;
+  var location;
+  var results;
+    
 
-  	function searchBandsInTown(artistname) {
-
-  	// Querying the bandsintown api for the selected artist, the ?app_id parameter is required, but can equal anything
-    var queryURL = "https://rest.bandsintown.com/artists/" + artistname + "/events?app_id=codingbootcamp";
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).done(function(response) {
-      // Print onject to console
-       console.log(response);
-      //Construct HTML table with tourdate info
-       var artistName = $('<td>').text(artist);
-       var date = $('<td>').text(response.datetime);
-       var venue = $('<td>').text(response.venue.name);
-       // Empty the contents of the artist-div, append the new artist content
-       $('#artist-input').empty();
-       $('#artist-input').append(artistName, date, venue);
-    });   
-
-
-         // Set function to create table and populate with results from AJAX
-    $(function() {
-    $.each(response, function(i, item) {
-        var $tr = $('<tr>').append(
-            $('<td>').text('#artist-input'),
-            $('<td>').text(response.datetime),
-            $('<td>').text(response.venue.name)
-        ); 
-
-
-    });
-  }
-
-   // Run artist-input through AJAX to return results
-
-    //Store results
-    var results = response.data;
 
    
     //Looping over every result to return first 5 items
     for (var i = 0; i < 5; i++) {
-      if reponse.data = true;
-        var tr = $('<tr>').text(#artist-input + response.datetime + response.venue.name);
-      else if response.data = false;
-        var p = $('<p>').text
+      if (response[0].data === true)
+        var tr = $('<tr>').text('#artist-input + response.datetime + response.venue.name');
+      else if (response[0].data === false);
+        var p = $('<p>').text('No Upcoming Shows, Sorry Stalker!');
          
 
-    }
+    };
 
 
 
@@ -66,14 +32,17 @@
   	// Link AJAX responses to html table
     var artist = $('<td>').text('#artist-input');
     var tourdate = $('<td>').text(response.datetime);
-    var venue = $(<'<td>').text(response.venue.name);
+    var venue = $('<td>').text(response.venue.name);
 
   	// Create arrays to handle data for table k=header v=row
 
+    // Items returned from AJAX to appear in the array?
+    
   	var data = {
-  		k: ['Artist', 'Tourdate', 'Venue']
-  		v: [['#artist-input', 'response.datetime', 'response.venue.name']]  // How do i get the items returned from AJAX to appear in the array?
-  	}
+  		k: ['Artist', 'Tourdate', 'Venue'],
+  		v: [['artists', 'response.datetime', 'response.venue.name']], 
+
+    };
 
 
   	// Make the Table class
@@ -87,7 +56,7 @@
     // Function to add data into table
     function insertData() {
       x = document.getElementById('tourDateDiv')
-      x.innerHTML = 
+      x.innerHTML = Table;
     }
 
 	// Setter methods, which allow the Table object to have it’s attributes set and have the data set.
@@ -166,7 +135,7 @@
    
 
     // Append table to div "tourDateDiv" 
-    $('#tourDateDiv').append(Table)
+    $('#tourDateDiv').append(Table);
 
 
     // tourDateDiv needs to expand to accomodate length of tour date list
@@ -199,7 +168,7 @@
   
 
   // BandsinTown API script
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
 
 
 	

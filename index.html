@@ -34,7 +34,7 @@
 
 <!-- Firebase reference -->
 	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-  <script src="assets/javascript/logic.js"></script>
+  
 
 <!-- Napster(Media)javascript reference --> 
   <script src="assets/javascript/napster-api.js"></script>
@@ -42,6 +42,7 @@
 <!-- Bands in Town API javascript ref -->
   <script src="assets/javascript/tourdates.js"></script>
 
+<script src="assets/javascript/logic.js"></script>
           
 </head>
 
@@ -237,66 +238,60 @@
       </div>
     </div>
 
-
+  
     <div class="col-sm-8">
+      <div class="row">
 
-      <div id="headerContainerDiv" class="card-panel">
-        <h4>Band Name</h4>
+        <div id="headerContainerDiv" class="card-panel">
+          <h4>Band Name</h4>
 
+        </div>
       </div>
 
 
+
+
         <!-- Start Tourdate table -->
-      <div id="tourDateDiv" class="card-panel ">
-        <h4>Tour Dates</h4>
-        <p></p>
-        <br>
-       <div class="col s6">  
-        <table class="striped">
-            <thead>
-              <tr>
-                <th>Artist</th>
-                <th>Tourdate</th>
-                <th>Venue</th>
-              </tr> 
-            </thead>
-            
-            <tbody> 
-                <tr>
-                  <td></td>    
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>  
+       <div class="col s8 offset-s4">
+       <div class="row">
+
+        
+          <div id="tourDateDiv" class="card-panel">
+          <h4>Tour Dates</h4>
+          <p></p>
+          <br>
+
+          <!-- <ul class="collapsible" data-collapsible="accordion"> -->
+             <!-- <div class="col s6">   -->
+              <table class="striped">
+                  <thead>
+                    <tr>
+                      <th>Artist</th>
+                      <th>Tourdate</th>
+                      <th>Venue</th>
+                    </tr> 
+                  </thead>
+                  
+                  <tbody id="test"> 
+                  </tbody>
+
+                  </table>  
+
+                  <!-- </div> -->
+                </div>
+              <!-- </ul> -->
             </div>
+          </div>
+         </div>
+        </div>  
+       </div> 
 
   <!-- End Tourdate table -->
         <br>
         <br>
 
       
-      </div>
+      
 
       <div id="simArtistDiv" class="card-panel">
         <h4>Others to Stalk - Related Artists</h4>
