@@ -18,7 +18,27 @@
       url: queryURL,
       method: "GET"
     }).done(function(response) {
+      // Print onject to console
        console.log(response);
+      //Construct HTML table with tourdate info
+       var artistName = $('<td>').text('#artist-input');
+       var date = $('<td>').text(response.datetime);
+       var venue = $('<td>').text(response.venue.name);
+       // Empty the contents of the artist-div, append the new artist content
+       $('#artist-input').empty();
+       $('#artist-input').append(artistName, date, venue);
+    });   
+
+
+         // Set function to create table and populate with results from AJAX
+    $(function() {
+    $.each(response, function(i, item) {
+        var $tr = $('<tr>').append(
+            $('<td>').text('#artist-input'),
+            $('<td>').text(response.datetime),
+            $('<td>').text(response.venue.name)
+        ); 
+
 
     });
   }
@@ -34,7 +54,7 @@
       if reponse.data = true;
         var tr = $('<tr>').text(#artist-input + response.datetime + response.venue.name);
       else if response.data = false;
-        var p = $('<p>').text()
+        var p = $('<p>').text
          
 
     }
@@ -143,24 +163,17 @@
 
     
    
-    // Set function to create table and populate with results from AJAX
-    $(function() {
-    $.each(response, function(i, item) {
-        var $tr = $('<tr>').append(
-            $('<td>').text('#artist-input'),
-            $('<td>').text(response.datetime),
-            $('<td>').text(response.venue.name)
-        ); //.appendTo('#records_table');
-        console.log($tr.wrap('<p>').html());
-    });
-});
+   
 
     // Append table to div "tourDateDiv" 
-    $('#tourDateDiv').append(Table);
+    $('#tourDateDiv').append(Table)
 
 
     // tourDateDiv needs to expand to accomodate length of tour date list
 
+
+    // Empty tour date div when user searches for new artist
+    $("")
 
 
 
