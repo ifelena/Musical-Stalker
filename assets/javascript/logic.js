@@ -55,7 +55,8 @@ $(document).ready(function(){
 
 
 
-      $("#searchDisplay").html(searches.length > 0 ? searches[4] : "nothing");
+      $("#searchDisplay").html(searches.length > 0 ? searches[0] : "nothing");
+      
       
 
      
