@@ -103,13 +103,6 @@
 	                  <br>
 	                  <br>
 
-	                <a class="waves-effect waves-light btn" genre="Easy Listening Music">
-	                  <i class="material-icons left">music_note</i>
-	                    Easy Listening
-	                </a> 
-	                  <br>
-	                  <br>
-
 	                <a class="waves-effect waves-light btn" genre="Electronic Music">
 	                  <i class="material-icons left">music_note</i>
 	                    Electronic
@@ -220,18 +213,26 @@
       <div class="row">
         <div class="col s12 m12 l12">
           <div id="headerContainerDiv" class="card-panel">
-            <h4>Band Name</h4>
+            <div class="row">
+              <div class="col s12 m12 l4">
+                <h3 id="topNameHeader">Band Name</h3>
+              </div>
+              <div class="col s12 m12 l8">
+                <p id="artistData"></p>
+              </div>
+            </div>
           </div>
         </div>
       </div>        
 
-      <!-- Start Tourdate table -->
+         <!-- Start Tourdate table -->
       <div class="row">
         <div class="col s12 m12 l12">
           <div id="tourDateDiv" class="card-panel ">
             <h4>Tour Dates</h4>
           <p id="no-response"></p>
           <br>
+          <table class="striped"> 
             <thead>
               <tr>
                 <th>Artist</th>
@@ -240,7 +241,7 @@
               </tr> 
             </thead>
   
-            <tbody id="test"> 
+            <tbody id="test">
             </tbody>
 
             </table>  
@@ -249,7 +250,7 @@
       </div> <!--Closes section Row-->
 
 	    
-    <div class="row">
+    <!-- <div class="row">
       <div class="col s12 m12 l12">
         <div id="simArtistDiv" class="card-panel">
           <h4>Others to Stalk - Related Artists</h4>
@@ -259,7 +260,7 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
 
 
     <div class="row">
