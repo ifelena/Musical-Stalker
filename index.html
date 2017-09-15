@@ -23,7 +23,8 @@
 <!-- Stylesheet reference -->
   <link rel="stylesheet" type="text/css" href="assets/style.css">
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
 
 <!-- GooglePlace API  -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFRWN8PVL2qv6q8xUl096GVi-Lp5TDdeQ&libraries=places&callback=initMap" async defer></script>
@@ -89,77 +90,77 @@
 	                  <br>
 	                  <br>
 
-	                <a class="waves-effect waves-light btn" genre="Classical Music">
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Classical Music">
 	                  <i class="material-icons left">music_note</i>
 	                    Classical
 	                </a> 
 	      						<br>
 	                	<br>
 
-	                <a class="waves-effect waves-light btn" genre="Country Music">
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Country Music">
 	                    <i class="material-icons left">music_note</i>
 	                      Country
 	                </a> 
 	                  <br>
 	                  <br>
 
-	                <a class="waves-effect waves-light btn" genre="Electronic Music">
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Electronic Music">
 	                  <i class="material-icons left">music_note</i>
 	                    Electronic
 	                </a> 
 	                 	<br>
 	                 	<br>
 
-	                <a class="waves-effect waves-light btn" genre="Folk Music">
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Folk Music">
 	                  <i class="material-icons left">music_note</i>
 	                    Folk
 	                </a> 
 	                  <br>
 	                  <br>
 
-                    <a class="waves-effect waves-light btn" genre="Hip Hop Music">
+                    <a class="waves-effect waves-light btn" id="bluesbtn" genre="Hip Hop Music">
                     <i class="material-icons left">music_note</i>
                       Hip Hop
                   </a> 
                     <br>
                     <br>
 
-	                <a class="waves-effect waves-light btn" genre="Jazz Music">
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Jazz Music">
 	                  <i class="material-icons left">music_note</i>
 	                    Jazz
 	                </a> 
 	                  <br>
 	                  <br>
 
-	                <a class="waves-effect waves-light btn" genre="New Age Music">
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="New Age Music">
 	                  <i class="material-icons left">music_note</i>
 	                    New Age
 	                </a> 
 	                  <br>
 	                  <br>
 
-	                <a class="waves-effect waves-light btn" genre="Punk Music">
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Punk Music">
 	                  <i class="material-icons left">music_note</i>
 	                    Punk
 	                </a> 
 	                  <br>
 	                  <br>
 
-	                <a class="waves-effect waves-light btn" genre="R&B Music">
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="R&B Music">
 	                  <i class="material-icons left">music_note</i>
 	                    RnB
 	                </a> 
 	                  <br>
 	                  <br>
 
-	                <a class="waves-effect waves-light btn" genre="Rap">
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Rap">
 	                  <i class="material-icons left">music_note</i>
 	                    Rap
 	                </a> 
 	                  <br>
 	                  <br>
 
-	                <a class="waves-effect waves-light btn" genre="Rock Music">
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Rock Music">
 	                  <i class="material-icons left">music_note</i>
 	                    Rock
 	                </a>
@@ -183,6 +184,7 @@
               <div class="input-field col s12">
                 <button class="btn cyan waves-effect waves-light right" name="action" type="submit" id="addArtist">Submit<i class="mdi-content-send right"></i></button>
 
+                <br>
                 <br>
                 <br>
 
@@ -215,7 +217,7 @@
           <div id="headerContainerDiv" class="card-panel">
             <div class="row">
               <div class="col s12 m12 l4">
-                <h3 id="topNameHeader">Band Name</h3>
+                <h2 id="topNameHeader">Band Name</h2>
               </div>
               <div class="col s12 m12 l8">
                 <p id="artistData"></p>
@@ -303,26 +305,36 @@
   <!-- Le Footer -->
   <footer class="container-fluid">
 
-
-        <footer class="page-footer">
+		
+        <footer class="page-footer" id = "leFooter">
           <div class="container">
-            <div class="row">
+            <div class="row" >
               <div class="col 12 s2">
                 <h5 class="white-text"></h5>
                 <p class="grey-text text-lighten-4"></p>
               </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <img src="https://imageog.flaticon.com/icons/png/512/25/25231.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF" alt="some_text" style="width: 80px;height: 40px;">
+              <div class="col l6 s12">
+				
+
+                <h5 class="white-text">Created By</h5>
+                
                 <ul>
                   <li><a class="grey-text text-lighten-3" href="#!">Github Ife</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">Github Shaun</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">Github Tom</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">Github Sean </a></li>
-                </ul>
+                  			<br>
+				</ul>
+						
+                <img id="napster" src="assets\Images\napster.png" height="70px" width="70px"/>
+				<img id="googlePlaces" src="assets\Images\googlePlaces.jpg" height="70px" width="70px"/>
+				<img id="soundCloud" src="assets\Images\music-graph.png" height="70px" width="70px"/>
+				<img id="soundCloud" src="assets\Images\bandsInTown.png" height="70px" width="70px"/>
+                	
               </div>
             </div>
-          </div>
+         
+  </div>
 
 
           <div class="footer-copyright">
