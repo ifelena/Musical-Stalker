@@ -120,8 +120,10 @@ $(document).ready(function(){
   
 
 
+
   	$("#addArtist").on("click", function(event) {
   	 	event.preventDefault()
+
 
       //Grabbed & Clear values from text boxes
       artists = $("#artist-input").val().trim();
@@ -140,8 +142,41 @@ $(document).ready(function(){
       console.log('after', searches)
       
       database.ref("searches").set(searches)
-    });
-      
+
+      // (Ife) Search Bands in Town for artists name and return tourdates
+      var queryURL = "https://rest.bandsintown.com/artists/" + artists + "/events?app_id=codingbootcamp";
+         $.ajax({
+            url: queryURL,
+            method: "GET"
+          }).done(function(response) {
+            
+            if (response.length) {
+              var trHTML = '';
+
+              $.each(response, function(i, item) {
+                  if (i === 5) {
+                    console.log(5);
+                    return false;
+                  }
+                  trHTML += 
+                  '<tr><td>' + artists +
+                  '</td><td>' + item.datetime + 
+                  '</td><td>' + item.venue.name + 
+                  '</td></tr>' 
+              });
+
+              $('tbody#test').append(trHTML)
+
+            } 
+
+          }); 
+
+      });
+     // End Bands in Town logic 
+
+
+            
+
      
 
     
