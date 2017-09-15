@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   var googlePlacesKey ="AIzaSyBFRWN8PVL2qv6q8xUl096GVi-Lp5TDdeQ";
 
-
+  initMap();
   // Press Genre Button
 
   $(".waves-effect.waves-light.btn").on("click", function(event){
@@ -27,8 +27,8 @@ $(document).ready(function(){
 
       function success(pos){
         userCords = pos.coords;
-        console.log(userCords);
-        console.log(userCords.latitude);
+        // console.log(userCords);
+        // console.log(userCords.latitude);
         //return userCords;
 
         var mapOptions = {
@@ -106,7 +106,7 @@ $(document).ready(function(){
     if (status === google.maps.places.PlacesServiceStatus.OK) {
       for (var i = 0; i < results.length; i++) {
         createMarker(results[i]);
-        console.log(results[i]);
+        // console.log(results[i]);
       }
     }
   }

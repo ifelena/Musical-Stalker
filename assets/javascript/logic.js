@@ -18,14 +18,24 @@ $(document).ready(function(){
   // basic artist lookup & get to main genre
   var musicGraphKey = "15ad1c68b6d53829ad83e71ac3c5a746";
 
+  // function similarArtists(){
+  //   $.ajax({
+  //     type: "GET",
+  //     url: "http://api.musicgraph.com/api/v2/artist/search?api_key=" + musicGraphKey + "&name=" + artists,
+  //   }).done(function(response){
+  // }
   
+
+
+
   function callMusicGraph(){
     $.ajax({
       type: "GET",
       url: "http://api.musicgraph.com/api/v2/artist/search?api_key=" + musicGraphKey + "&name=" + artists,
     }).done(function(response){
       var musicGraphGenre = response.data[0].main_genre + " Music";
-      console.log(musicGraphGenre);
+      $("#topNameHeader").text(response.data[0].name);
+      console.log(response);
       
       // Edit DOM with artist name
       $("#venuesHeader").text("You are stalking " + artists + ", here are some places you may enjoy skulking about:");
@@ -42,8 +52,8 @@ $(document).ready(function(){
 
         function success(pos){
           userCords = pos.coords;
-          console.log(userCords);
-          console.log(userCords.latitude);
+          // console.log(userCords);
+          // console.log(userCords.latitude);
           //return userCords;
 
           var mapOptions = {
@@ -112,6 +122,83 @@ $(document).ready(function(){
     } //Closes function musicGraph
   
 
+   // where input from text box is bandName
+  function napSearch() {
+  
+    var audiolink;
+         var media;
+         var bandName = artists;
+         var queryURL = "http://api.napster.com/v2.2/search?apikey=OTM2NzJhM2ItNTAyNS00NGRhLTk5YTMtNDA5MzA3ZDllYzQ1&query=" +bandName+ "&type=artist";     
+         $.ajax({
+           url: queryURL,
+           method: "GET"
+         }).done(function(response) {
+             // console.log(response);
+
+           if (response.order)
+             response=response.order[0];
+
+            console.log(response.search.order[0]);
+
+            var bandID=(response.search.order[0]);
+             //randomizer
+            var x = Math.floor((Math.random() * response.search.data.artists[0].blurbs.length) + 1);
+
+             //need to create randomizer here to grab random blurbs
+            $('#artistData').html(response.search.data.artists[0].blurbs[x-1] +"</p><br><p>" + response.search.data.artists[0].blurbs[x]);
+
+               
+               // console.log(artistData);
+
+         // Taking band Id capured and using it to find specefic tracks to play.
+
+
+         
+         queryURL = "http://api.napster.com/v2.2/artists/" + bandID + "/tracks?apikey=OTM2NzJhM2ItNTAyNS00NGRhLTk5YTMtNDA5MzA3ZDllYzQ1&limit=2";
+
+                var result;
+
+                $.get( queryURL, function( data ) {
+                  $( "#result" ).html( data );
+                  console.log(result);
+                    });
+
+         $.ajax({
+           url: queryURL,
+           method: "GET"
+         }).done(function(response) {
+           
+
+           if (response.previewURL)
+             response=response.tracks["0"].previewURL;
+
+              console.log(response.tracks["0"].previewURL);
+              
+              $('#result').text(response.tracks["0"].previewURL);
+
+              var a = $("<div>");
+          
+           // Adding a data-attribu
+
+              console.log(response.tracks["0"].previewURL);
+
+              $(".amazingaudioplayer-source").append(`
+                  <video controls autoplay name="media">
+                    <source src=${response.tracks["0"].previewURL} audio_source type="audio/mpeg">
+                  </video>
+              `)
+
+              $(".audio_source").attr("src", response.tracks[0].previewURL);
+
+              function load(){
+              window.location.href = "amazingaudioplayer-source";
+              }
+
+            }) //closes done function
+        });
+      }
+  // CLOSES NAPSTER API ++++++++++++++++++++++++++++++++++++++++++++++++++
+
   	
   		  	
   	var artists = "";
@@ -143,19 +230,19 @@ $(document).ready(function(){
       
       database.ref("searches").set(searches);
 
-      // (Ife) Search Bands in Town for artists name and return tourdates
+     // (Ife) Search Bands in Town for artists name and return tourdates
       var queryURL = "https://rest.bandsintown.com/artists/" + artists + "/events?app_id=codingbootcamp";
          $.ajax({
             url: queryURL,
             method: "GET",
             dataType: "json"
           }).done(function(response) {
+            
             $('tbody#test').html('');
             var trHTML = '';
 
             $.each(response, function(i, item) {
                 if (i === 5) {
-                  console.log(5);
                   return false;
                 }
                 trHTML += 
@@ -169,9 +256,14 @@ $(document).ready(function(){
 
 
           }).fail(function() {
-            $('p#no-response').text('No Upcoming Shows, Sorry Stalker! Check out some new places on the map below');
+            $('#no-response').text('No Upcoming Shows, Sorry Stalker! Check out some new places on the map below');
           });      
           // End Bands in Town logic 
+
+          // CALL NAPSTER API ++++++++ LOGIC ABOVE
+          napSearch()
+
+
 
       });
     // END CLICK FUNCTION
