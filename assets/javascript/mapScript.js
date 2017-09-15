@@ -1,26 +1,6 @@
 $(document).ready(function(){
-  var musicGraphKey = "15ad1c68b6d53829ad83e71ac3c5a746";
-  var artist = "sublime";
-  var genreBtnInput = "";
-    
+
   var googlePlacesKey ="AIzaSyBFRWN8PVL2qv6q8xUl096GVi-Lp5TDdeQ";
-    
-  
-  // basic artist lookup & get to main genre
-  function callMusicGraph(){
-    $.ajax({
-      type: "GET",
-      url: "http://api.musicgraph.com/api/v2/artist/search?api_key=" + musicGraphKey + "&name=" + artist,
-    }).done(function(response){
-      var genre = response.data[0].main_genre;
-      console.log(genre);
-    });
-  }
-
-  callMusicGraph();
-
-
-
 
 
   // Press Genre Button
@@ -30,7 +10,8 @@ $(document).ready(function(){
     genreBtnInput = $(this).attr("genre");
     console.log(genreBtnInput);
 
-
+    // Edit DOM with artist name
+    $("#venuesHeader").text("You are stalking " + genreBtnInput + ", here are some places you may enjoy skulking about:");
 
 
     //Start geolocation
@@ -78,7 +59,7 @@ $(document).ready(function(){
           radius: 10000,
           keyword: [genreBtnInput],
           type: ['bars']
-        }, callback);
+        }, callback1);
 
       } //closes "success"
 
@@ -113,19 +94,19 @@ $(document).ready(function(){
 
     infowindow = new google.maps.InfoWindow();
     var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch({
-      location: denver,
-      radius: 5000,
-      keyword: ['punk'],
-      type: ['restaurant']
-    });
+    // service.nearbySearch({
+    //   location: denver,
+    //   radius: 5000,
+    //   keyword: ['punk'],
+    //   type: ['restaurant']
+    // });
   }
 
-  function callback(results, status) {
+  function callback1(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
       for (var i = 0; i < results.length; i++) {
         createMarker(results[i]);
-        // console.log(results[i]);
+        console.log(results[i]);
       }
     }
   }
