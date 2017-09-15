@@ -42,9 +42,7 @@
     <script src="audioplayerengine/amazingaudioplayer.js"></script>
     <link rel="stylesheet" type="text/css" href="audioplayerengine/initaudioplayer-1.css">
     <script src="audioplayerengine/initaudioplayer-1.js"></script>
-
-<!-- Bands in Town API javascript ref -->
-  <script src="assets/javascript/tourdates.js"></script>
+    
 
 <!-- Napster API javascript ref -->
   <script src="assets/javascript/napster-api.js"></script>
@@ -195,6 +193,10 @@
                 <br>
                 <br>
 
+                <hr>
+
+                <br>
+
               <h5>Last Stalked</h5>
                 <div id ="searchDisplay">
                   
@@ -204,59 +206,12 @@
               </div>
                 
             </div> <!-- CLOSES ROW--> 
-        
-
           </form>
         </div>
       </div>
     </div>
 
   
-    <div class="col-sm-8">
-      <div class="row">
-
-        <div id="headerContainerDiv" class="card-panel">
-          <h4>Band Name</h4>
-
-        </div>
-      </div>
-
-
-
-
-        <!-- Start Tourdate table -->
-       <div class="col s8 offset-s4">
-       <div class="row">
-
-        
-          <div id="tourDateDiv" class="card-panel">
-          <h4>Tour Dates</h4>
-          <p></p>
-          <br>
-
-          
-                  <thead>
-                    <tr>
-                      <th>Artist</th>
-                      <th>Tourdate</th>
-                      <th>Venue</th>
-                    </tr> 
-                  </thead>
-                  
-                  <tbody id="test"> 
-                  </tbody>
-
-                  </table>  
-
-                 
-                </div>
-              
-            </div>
-          </div>
-         </div>
-        </div>  
-       </div> 
-    </div> <!-- END OF FORM DIVS--> 
 
     <!-- START OF DIVS FOR RIGHT JUSTIFIED CONTENT OF SCREEN -->
     <div class="col s12 m12 l8">
@@ -275,44 +230,19 @@
         <div class="col s12 m12 l12">
           <div id="tourDateDiv" class="card-panel ">
             <h4>Tour Dates</h4>
-            <p>Include API for tour dates, map of venues, etc.</p>
-            <br>  
-            <table class="striped">
-                <thead>
-                  <tr>
-                    <th>Artist</th>
-                    <th>Tourdate</th>
-                    <th>Venue</th>
-                  </tr> 
-                </thead>
-                
-                <tbody> 
-                    <tr>
-                      <td></td>    
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                </tbody>
+          <p id="no-response"></p>
+          <br>
+            <thead>
+              <tr>
+                <th>Artist</th>
+                <th>Tourdate</th>
+                <th>Venue</th>
+              </tr> 
+            </thead>
+  
+            <tbody id="test"> 
+            </tbody>
+
             </table>  
           </div>
         </div>
