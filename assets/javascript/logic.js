@@ -145,14 +145,11 @@ $(document).ready(function(){
             var x = Math.floor((Math.random() * response.search.data.artists[0].blurbs.length) + 1);
 
              //need to create randomizer here to grab random blurbs
-            $('#artistData').html(response.search.data.artists[0].blurbs[x-1] +"</p><br><p>" + response.search.data.artists[0].blurbs[x]);
-
+            $('#artistData').html(response.search.data.artists[0].blurbs[0] +"</p><br><p>" + response.search.data.artists[0].blurbs[1]+"</p><br><p>" + response.search.data.artists[0].blurbs[2]);
                
                // console.log(artistData);
 
          // Taking band Id capured and using it to find specefic tracks to play.
-
-
          
          queryURL = "http://api.napster.com/v2.2/artists/" + bandID + "/tracks?apikey=OTM2NzJhM2ItNTAyNS00NGRhLTk5YTMtNDA5MzA3ZDllYzQ1&limit=2";
 
