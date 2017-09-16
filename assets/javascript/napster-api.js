@@ -6,7 +6,7 @@ function napSearch(){
   var audiolink;
          var media;
          var bandName = "green day";
-         var queryURL = "http://api.napster.com/v2.2/search?apikey=OTM2NzJhM2ItNTAyNS00NGRhLTk5YTMtNDA5MzA3ZDllYzQ1&query=" +bandName+ "&type=artist";     
+         var queryURL = "https://api.napster.com/v2.2/search?apikey=OTM2NzJhM2ItNTAyNS00NGRhLTk5YTMtNDA5MzA3ZDllYzQ1&query=" +bandName+ "&type=artist";     
          $.ajax({
            url: queryURL,
            method: "GET"
@@ -32,7 +32,7 @@ function napSearch(){
 
 
          
-         queryURL = "http://api.napster.com/v2.2/artists/" + bandID + "/tracks?apikey=OTM2NzJhM2ItNTAyNS00NGRhLTk5YTMtNDA5MzA3ZDllYzQ1&limit=2";
+         queryURL = "https://api.napster.com/v2.2/artists/" + bandID + "/tracks?apikey=OTM2NzJhM2ItNTAyNS00NGRhLTk5YTMtNDA5MzA3ZDllYzQ1&limit=2";
 
                 var result;
 
