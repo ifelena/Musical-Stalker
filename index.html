@@ -8,6 +8,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
 
+<!-- Reset Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="assets/reset.css">
+
 <!-- JQuery CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
   </script> 
@@ -15,235 +18,336 @@
 <!-- Materialize CDN -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
-<!-- =================================== -->
-  <!-- MIGHT BE AN ISSUE HERE -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
 <!-- Stylesheet reference -->
   <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
 
-<!-- GooglePlace API -->
+<!-- GooglePlace API  -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFRWN8PVL2qv6q8xUl096GVi-Lp5TDdeQ&libraries=places&callback=initMap" async defer></script>
 
 <!-- Map javascript reference -->
-  <script src="assets/mapScript.js"></script>
+  <script src="assets/javascript/mapScript.js"></script>
+
 
 <!-- Firebase reference -->
 	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  
 
+<!-- Napster(Media)javascript reference --> 
+  <script src="assets/javascript/napster-api.js"></script>
+   <script src="audioplayerengine/jquery.js"></script>
+    <script src="audioplayerengine/amazingaudioplayer.js"></script>
+    <link rel="stylesheet" type="text/css" href="audioplayerengine/initaudioplayer-1.css">
+    <script src="audioplayerengine/initaudioplayer-1.js"></script>
+    
+
+<!-- Napster API javascript ref -->
+  <script src="assets/javascript/napster-api.js"></script>
+
+  <script src="assets/javascript/logic.js"></script>
+          
 </head>
 
 <body>
-  &lt;
+  
 
-  <style>
-     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-     .row.content {height: 1500px}
-     
-     /* Set gray background color and 100% height */
-     .sidenav {
-       background-color: #f1f1f1;
-       height: 100%;
-     }
-     
-     /* Set black background color, white text and some padding */
-     footer {
-       background-color: #555;
-       color: white;
-       padding: 15px;
-     }
-     
-     /* On small screens, set height to 'auto' for sidenav and grid */
-     @media screen and (max-width: 767px) {
-       .sidenav {
-         height: auto;
-         padding: 15px;
-       }
-       .row.content {height: auto;} 
-     }
-  </style>
+  
 
-  <!--    Fancy spinner -->
+ 
 
-
-  <div class="row">
+	
+  <div class="row"> <!-- Encompasses all content --> 
     <div class="col s12 m12 l4">
-      <div class="card-panel">
-        <div class="preloader-wrapper big active">
-          <div class="spinner-layer spinner-blue-only">
-            <div class="circle-clipper left">
-              <div class="circle">
-              </div>
-            </div>
-
-
-            <div class="gap-patch">
-              <div class="circle">
-              </div>
-            </div>
-
-
-            <div class="circle-clipper right">
-              <div class="circle">
-              </div>
-            </div>
-          </div>
-
-
-          <div class="preloader-wrapper big active">
-            <div class="spinner-layer spinner-red-only">
-              <div class="circle-clipper left">
-                <div class="circle">
-                </div>
-              </div>
-
-
-              <div class="gap-patch">
-                <div class="circle">
-                </div>
-              </div>
-
-
-              <div class="circle-clipper right">
-                <div class="circle">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-        <h4 class="header2">Music Stalker</h4>
+      <div class="card-panel" id ="formWrapper">    
+        <h1 class="header1">Music Stalker</h1>
 
        <!--  Prepare form -->
-        <div class="row">
+        <div class="row"> 
           <form class="col s12">
+            
             <div class="row">
               <div class="input-field col s12">
-                <i class="material-icons prefix">music_video</i> <input class="validate" id="icon_prefix" type="text"> <label for="icon_prefix">Band Name</label>
+                <i class="material-icons prefix">music_video</i> <input class="validate" id="artist-input" type="text"> <label for="icon_prefix">Artist Name</label>
               </div>
             </div>
 
 
             <div class="row">
               <div class="input-field col s12">
-                <i class="material-icons prefix">transform</i> <input class="validate" id="icon_prefix" type="text"> <label for="icon_prefix">Genre</label>
+                <h4 class="header2">Search By Genre</h4>
 
                <!--  Fancy buttons w/genres -->
-                <div class="row">
-                  <div class="input-field col s12 push-s2">
-                    <a class="waves-effect waves-light btn">
-                      <i class="material-icons left">music_note</i>
-                        Punk
-                    </a> 
-                    
-                    <a class="waves-effect waves-light btn">
-                      <i class="material-icons left">music_note</i>
-                        Rock
-                    </a> 
+                <div class="input-field col s12 push-s2">
+				
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Blues Music">
+	                    <i class="material-icons left">music_note</i>
+	                      Blues
+	                </a> 
+	                  <br>
+	                  <br>
 
-                    <a class="waves-effect waves-light btn">
-                      <i class="material-icons right">music_note</i>
-                        Pop
-                    </a>
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Classical Music">
+	                  <i class="material-icons left">music_note</i>
+	                    Classical
+	                </a> 
+	      						<br>
+	                	<br>
 
-                  </div>
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Country Music">
+	                    <i class="material-icons left">music_note</i>
+	                      Country
+	                </a> 
+	                  <br>
+	                  <br>
+
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Electronic Music">
+	                  <i class="material-icons left">music_note</i>
+	                    Electronic
+	                </a> 
+	                 	<br>
+	                 	<br>
+
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Folk Music">
+	                  <i class="material-icons left">music_note</i>
+	                    Folk
+	                </a> 
+	                  <br>
+	                  <br>
+
+                    <a class="waves-effect waves-light btn" id="bluesbtn" genre="Hip Hop Music">
+                    <i class="material-icons left">music_note</i>
+                      Hip Hop
+                  </a> 
+                    <br>
+                    <br>
+
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Jazz Music">
+	                  <i class="material-icons left">music_note</i>
+	                    Jazz
+	                </a> 
+	                  <br>
+	                  <br>
+
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="New Age Music">
+	                  <i class="material-icons left">music_note</i>
+	                    New Age
+	                </a> 
+	                  <br>
+	                  <br>
+
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Punk Music">
+	                  <i class="material-icons left">music_note</i>
+	                    Punk
+	                </a> 
+	                  <br>
+	                  <br>
+
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="R&B Music">
+	                  <i class="material-icons left">music_note</i>
+	                    RnB
+	                </a> 
+	                  <br>
+	                  <br>
+
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Rap">
+	                  <i class="material-icons left">music_note</i>
+	                    Rap
+	                </a> 
+	                  <br>
+	                  <br>
+
+	                <a class="waves-effect waves-light btn" id="bluesbtn" genre="Rock Music">
+	                  <i class="material-icons left">music_note</i>
+	                    Rock
+	                </a>
+			
                 </div>
               </div>
+            </div> <!-- CLOSES ROW--> 
+              <!-- End of Buttons -->
 
 
-              <div class="row">
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">location_searching</i> <input class="validate" id="icon_prefix" type="text"> <label for="icon_prefix">Location</label>
-                </div>
+           <!--  <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">location_searching</i> <input class="validate" id="location-input" type="text"> <label for="icon_prefix">Location</label>
               </div>
+            </div> -->
+
+            <!-- Turn off location input since we are currently using geolocation -->
 
 
-              <div class="row">
-                <div class="input-field col s12">
-                  <button class="btn cyan waves-effect waves-light right" name="action" type="submit">Submit <i class="mdi-content-send right"></i></button>
+            <div class="row">
+              <div class="input-field col s12">
+                <button class="btn cyan waves-effect waves-light right" name="action" type="submit" id="addArtist">Submit<i class="mdi-content-send right"></i></button>
+
+                <br>
+                <br>
+                <br>
+
+                <hr>
+
+                <br>
+
+              <h5>Last Stalked</h5>
+                <div id ="searchDisplay">
+                  
+                
                 </div>
+
               </div>
-            </div>
+                
+            </div> <!-- CLOSES ROW--> 
           </form>
         </div>
       </div>
     </div>
 
+  
 
-    <div class="col-sm-8">
-
-      <div id="headerContainerDiv" class="card-panel">
-        <h4>Band Name</h4>
-
-      </div>
-
-      <div id="tourDateDiv" class="card-panel">
-        <h4>Tour Dates</h4>
-        <p>Include API for tour dates, map of venues, etc.</p>
-        <br>
-        <br>
+    <!-- START OF DIVS FOR RIGHT JUSTIFIED CONTENT OF SCREEN -->
+    <div class="col s12 m12 l8">
       
-      </div>
+      <!-- Header Section -->
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <div id="headerContainerDiv" class="card-panel">
+            <div class="row">
+              <div class="col s12 m12 l5">
+                <h2 id="topNameHeader">Band Name</h2>
+              </div>
+              <div class="col s12 m12 l7">
+                <p id="artistData"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>        
 
-      <div id="simArtistDiv" class="card-panel">
-        <h4>Others to Stalk - Related Artists</h4>
-        <p>Provide a list of similar artists</p>
-        <br>
-        <br>
+         <!-- Start Tourdate table -->
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <div id="tourDateDiv" class="card-panel ">
+            <h4>Tour Dates</h4>
+          <p id="no-response"></p>
+          <br>
+          <table class="striped"> 
+            <thead>
+              <tr>
+                <th>Artist</th>
+                <th>Tourdate</th>
+                <th>Venue</th>
+              </tr> 
+            </thead>
+  
+            <tbody id="test">
+            </tbody>
 
-      </div>
+            </table>  
+          </div>
+        </div>
+      </div> <!--Closes section Row-->
 
-      <div class="card-panel">
-        <h4>Eating and Drinking to Aid the Stalking</h4>
-        <div id="relatedVenues" class="card-panel">
-          <h4>Related Venues by Location</h4>
+	    
+    <!-- <div class="row">
+      <div class="col s12 m12 l12">
+        <div id="simArtistDiv" class="card-panel">
+          <h4>Others to Stalk - Related Artists</h4>
+          <p>Provide a list of similar artists</p>
+          <br>
+          <br>
+
         </div>
       </div>
+    </div> -->
 
-      <div id="media" class="card-panel">
-        <h4>Soundtrack to Stalk by</h4>
-        <p>Youtube videos, Spotify, etc.</p>
-        <br>
-        <br>
+
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div class="card-panel">
+          <h4 id="venuesHeader">Eating and Drinking to Aid the Stalking</h4>
+          <div id="relatedVenues" class="card-panel">
+            <h4>Related Venues by Location</h4>
+          </div>
+        </div>
       </div>
-
-        <br>
     </div>
-  </div>
+
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div id="media" class="card-panel">
+          <h4>Soundtrack to Stalk by</h4>
+            <p><div id="amazingaudioplayer-1" style="display:block;position:relative;width:100%;max-width:300px;height:164px;margin:0px auto 0px;">
+            <ul class="amazingaudioplayer-audios" style="display:none;">
+                <li data-artist="" data-title="player" data-album="" data-info="" data-image="audios/IMG_3244.JPG" data-duration="0">
+                    <div class="amazingaudioplayer-source" data-type="audio/mpeg" />
+                </li>
+            </ul>
+            
+            <div class="amazingaudioplayer-engine"><a href="" title="Lurk Player">Quick Skulk</a></div>
+            </div></p>
+          
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+
+
+  </div>  <!-- Closes all content to the Right of the search form-->
+
+  <div class="clear"></div>
 
 
   <!-- Le Footer -->
   <footer class="container-fluid">
 
-
-        <footer class="page-footer">
+		
+        <footer class="page-footer" id = "leFooter">
           <div class="container">
-            <div class="row">
+            <div class="row" >
               <div class="col 12 s2">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                <h5 class="white-text"></h5>
+                <p class="grey-text text-lighten-4"></p>
               </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <img src="https://imageog.flaticon.com/icons/png/512/25/25231.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF" alt="some_text" style="width: 80px;height: 40px;">
+              <div class="col l6 s12">
+				
+
+                <h5 class="white-text">Created By</h5>
+                
                 <ul>
                   <li><a class="grey-text text-lighten-3" href="#!">Github Ife</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">Github Shaun</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">Github Tom</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">Github Sean </a></li>
-                </ul>
+                  			<br>
+				</ul>
+						
+                <img id="napster" src="assets\Images\napster.png" height="70px" width="70px"/>
+				<img id="googlePlaces" src="assets\Images\googlePlaces.jpg" height="70px" width="70px"/>
+				<img id="soundCloud" src="assets\Images\music-graph.png" height="70px" width="70px"/>
+				<img id="soundCloud" src="assets\Images\bandsInTown.png" height="70px" width="70px"/>
+                	
               </div>
             </div>
-          </div>
+         
+  </div>
+
+
           <div class="footer-copyright">
             <div class="container">
             © 2017 Team Epsilon
             <a class="grey-text text-lighten-4 right" href="https://codingbootcamp.du.edu/">DU Bootcamp</a>
             </div>
           </div>
+
         </footer>
   </footer>
+
+  <div id="hiddenDataCntr"></div>
+
 </body>
 </html>

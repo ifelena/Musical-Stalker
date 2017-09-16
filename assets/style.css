@@ -1,8 +1,96 @@
 /*.btn {
 padding: 10pt;
 }*/
+body {
+	background-color: #D0D3C5;
+}
 
+.header2 {
+	font-family: 'Permanent Marker', cursive;
+}
 
 #relatedVenues {
 	height: 150pt;
+	color: #032B2F;
+}
+
+#venuesHeader {
+	font-family: 'Permanent Marker', cursive;
+	background-color: #0B708A;
+	color: #D0D3C5;
+}
+
+.card-panel {
+	font-family: 'Permanent Marker', cursive;
+	background-color: #0B708A;
+	color: #D0D3C5;
+}
+
+.header1 {
+	font-family: 'Monoton', cursive;
+	color: #56B1BF;
+
+}
+
+#formWrapper {
+	background-color: #032B2F;
+/*	margin-left: -20px;
+	margin-bottom: -19px;*/
+	
+}
+
+#topNameHeader {
+	font-family: 'Monoton', cursive;
+	background-color: #0B708A;
+	color: #D0D3C5;
+}
+
+#tourDateDiv{
+	font-family: 'Permanent Marker', cursive;
+	background-color: #0B708A;
+	color: #D0D3C5;
+}
+
+.striped {
+	font-family: 'Play', sans-serif;
+	color: #032B2F;
+}
+
+
+#page-footer{
+	top margin: -25px;
+	position: fixed;
+}
+
+.clear {
+	clear: both;
+}
+
+
+#artistData {
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Play', sans-serif;
+	
+}
+
+#bluesbtn {
+	background-color: #56B1BF;
+	color:#032B2F; ;
+}
+
+#addArtist {
+	color: #032B2F
+}
+
+#leFooter {
+	background-color: #56B1BF;
+}
+
+#creators {
+	font-family: 'Permanent Marker', cursive;
+}
+
+#napster {
+	margin-left: 150px;
 }
