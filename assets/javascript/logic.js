@@ -34,7 +34,7 @@ $(document).ready(function(){
       url: "http://api.musicgraph.com/api/v2/artist/search?api_key=" + musicGraphKey + "&name=" + artists,
     }).done(function(response){
       var musicGraphGenre = response.data[0].main_genre + " Music";
-      $("#topNameHeader").text(artists);
+      // $("#topNameHeader").text(artists);
       console.log(response);
       
       // Edit DOM with artist name
@@ -213,6 +213,7 @@ $(document).ready(function(){
       artists = $("#artist-input").val().trim();
       // var location = $("#location-input").val().trim();
       $("#artist-input").val("");
+      $("#topNameHeader").text(artists);
       // $("#location-input").val("");
 
 
