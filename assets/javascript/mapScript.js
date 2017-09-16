@@ -12,7 +12,8 @@ $(document).ready(function(){
 
     // Edit DOM with artist name
     $("#venuesHeader").text("You are stalking " + genreBtnInput + ", here are some places you may enjoy skulking about:");
-
+    $('#artistData').html("");
+    $('#topNameHeader').html("<p>"+genreBtnInput+"</p>");
 
     //Start geolocation
 
